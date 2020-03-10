@@ -1,11 +1,15 @@
 import React from 'react';
+import StartupScreen from "./views/StartupScreen";
+import { withRouter } from "react-router-dom";
+import './style.css';
 
-const App = () => {
-    return (
-        <div>
-          App
-        </div>
-    );
-};
+function App(props) {
+  return (
+    <div className="App">
+      {/*<Login/>*/}
+      <StartupScreen/>
+    </div>
+  );
+}
 
-export default App;
+export default withRouter(App);
