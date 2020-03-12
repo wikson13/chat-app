@@ -2,35 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac51e559-4fbf-4c92-8006-cf9489cc4970" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/allegro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/dressLove.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Loading.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/firebase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/auth/authActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/auth/authReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/auth/authSagas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/counter/counterActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/counter/counterReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/counter/counterSagas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/data/dataActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/data/dataReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/data/dataSaga.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store/rootSaga.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/HomeScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/StartupScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Chat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/RoomList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sidebar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WorkspaceItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WorkspaceList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config/theme.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/StartupScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/StartupScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -86,7 +81,9 @@
       <workItem from="1583863806128" duration="705000" />
       <workItem from="1583869622318" duration="45000" />
       <workItem from="1583869676583" duration="2335000" />
-      <workItem from="1583872648753" duration="136000" />
+      <workItem from="1583872648753" duration="373000" />
+      <workItem from="1583946695240" duration="1855000" />
+      <workItem from="1584034684095" duration="6674000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1583869193631</created>
@@ -95,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583869193631</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add login (need fix)">
+      <created>1583872877722</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583872877722</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,20 +120,30 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Add login (need fix)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add login (need fix)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="218" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583871011956">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="218" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/242.1103.1440.801/0.23.1920.1057@0.23.1920.1057" timestamp="1583871011956" />
+    <state x="89" y="66" key="CommitChangelistDialog2" timestamp="1583872877579">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="89" y="66" key="CommitChangelistDialog2/242.1103.1440.801/0.23.1920.1057@0.23.1920.1057" timestamp="1583872877579" />
     <state x="469" y="190" key="SettingsEditor" timestamp="1583869666548">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="469" y="190" key="SettingsEditor/242.1103.1440.801/0.23.1920.1057@0.23.1920.1057" timestamp="1583869666548" />
-    <state x="653" y="383" key="com.intellij.ide.util.TipDialog" timestamp="1583869746792">
+    <state x="80" y="287" key="Vcs.Push.Dialog.v2" timestamp="1583872885026">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
+    <state x="80" y="287" key="Vcs.Push.Dialog.v2/242.1103.1440.801/0.23.1920.1057@0.23.1920.1057" timestamp="1583872885026" />
+    <state x="490" y="296" key="com.intellij.ide.util.TipDialog" timestamp="1583946736107">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="490" y="296" key="com.intellij.ide.util.TipDialog/0.23.1440.801/-648.-1057.2560.1057@0.23.1440.801" timestamp="1583946736107" />
     <state x="653" y="383" key="com.intellij.ide.util.TipDialog/242.1103.1440.801/0.23.1920.1057@0.23.1920.1057" timestamp="1583869746792" />
   </component>
 </project>

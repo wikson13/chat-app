@@ -6,7 +6,6 @@ import './style.css';
 function App(props) {
   return (
     <div className="App">
-      {/*<Login/>*/}
       <StartupScreen/>
     </div>
   );

@@ -25,7 +25,8 @@ const Login = () => {
     return (
         <div className={classes.container}>
             <Paper elevation={11} className={classes.loginBox}>
-                <h1>DressLove Panel</h1>
+                <h1>TRASTO CHAT</h1>
+                <h2 className={classes.subtitle}>{isLogin?'Logowanie':'Rejestracja'}</h2>
                 <TextField label="E-mail" variant="outlined" className={classes.input} fullWidth value={email}
                            onChange={(e) => setEmail(e.target.value)} error={error===null?false:true}/>
                 <TextField label="Hasło" variant="outlined" className={classes.input} helperText={error===null?'':error.message} error={error===null?false:true}
@@ -42,7 +43,7 @@ const Login = () => {
                 <Button variant="contained" color="primary" className={classes.button} onClick={signinButtonHandler}>
                     {isLogin?'Zaloguj':'Zarejestruj'}
                         </Button>
-                <p onClick={()=>setIsLogin(!isLogin)}>{isLogin?'Rejestracja':'Logowanie'}</p>
+                <p onClick={()=>setIsLogin(!isLogin)} className={classes.switchButton}>{isLogin?'Rejestracja':'Logowanie'}</p>
             </Paper>
         </div>
     );
@@ -68,6 +69,16 @@ const useStyles = makeStyles(theme => ({
     },
     button: {
         marginTop: '10px'
+    },
+    subtitle:{
+        marginTop:14,
+        fontWeight:'400',
+        color:'#333333',
+        textTransform:'uppercase'
+    },
+    switchButton:{
+        marginTop:20,
+        
     }
 }));
 
