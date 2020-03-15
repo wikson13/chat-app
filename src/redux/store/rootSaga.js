@@ -1,7 +1,8 @@
-import {all} from 'redux-saga/effects';
+import { all } from 'redux-saga/effects';
 import authSagas from '../auth/authSagas';
-import counterSagas from '../counter/counterSagas';
-import dataSagas from "../data/dataSaga";
+// import namespacesSagas from '../namespaces/namespacesSagas';
+
 export default function* rootSaga() {
-  yield all([...authSagas, ...counterSagas, ...dataSagas]);
+   // yield all([...authSagas, ...namespacesSagas]);
+   yield all([...authSagas]);
 }
