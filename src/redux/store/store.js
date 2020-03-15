@@ -1,23 +1,21 @@
-import {combineReducers} from 'redux';
-import {createStore, applyMiddleware, compose} from 'redux';
+import { combineReducers } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from './rootSaga';
-import {composeWithDevTools} from 'redux-devtools-extension';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import authReducer from '../auth/authReducer';
-import counterReducer from '../counter/counterReducer';
-import dataReducer from "../data/dataReducer";
+import namespacesReducer from '../namespaces/namespacesReducer';
 
 const reducers = combineReducers({
-  auth: authReducer,
-  counter: counterReducer,
-  data:dataReducer
+   auth: authReducer,
+   namespace: namespacesReducer
 });
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
-  reducers,
-  composeWithDevTools(applyMiddleware(sagaMiddleware)),
+   reducers,
+   composeWithDevTools(applyMiddleware(sagaMiddleware))
 );
 sagaMiddleware.run(rootSaga);
 
