@@ -2,8 +2,8 @@ const Namespace = require('../classes/Namespace');
 const Room = require('../classes/Room');
 
 const namespaces = [];
-const schoolNs = new Namespace(0, 'School', 'imgUrl', '/school');
-const workNs = new Namespace(1, 'Work', 'imgUrl', '/work');
+const schoolNs = new Namespace(0, 'School', 'https://i.ya-webdesign.com/images/white-graduation-cap-png-7.png', '/school');
+const workNs = new Namespace(1, 'Work', 'https://www.materialui.co/materialIcons/action/work_white_192x192.png', '/work');
 
 namespaces.push(schoolNs, workNs);
 

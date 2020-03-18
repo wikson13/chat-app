@@ -10,6 +10,7 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Sidebar from '../components/Sidebar';
 import { io, ioNS } from '../utils/io';
+import * as namespacesActions from '../redux/namespaces/namespacesActions'
 
 const HomeScreen = props => {
    const classes = useStyles();
@@ -18,12 +19,14 @@ const HomeScreen = props => {
    useEffect(() => {
       // import namespaces from socket
       io.on('nsList', nsList => {
-         nsList.forEach(item => {
-            const ns = ioNS(item.endpoint);
-            ns.on('nsRoomLoad', roomList => {
-               console.log(roomList);
-            });
-         });
+         dispatch(namespacesActions.fetchNamespacesSuccess(nsList));
+         // nsList.forEach(item => {
+         //    const ns = ioNS(item.endpoint);
+         //    ns.on('nsRoomLoad', roomList => {
+         //       console.log(roomList);
+         //       console.log(nsList)
+         //    });
+         // });
       });
    }, []);
 

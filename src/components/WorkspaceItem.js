@@ -2,12 +2,13 @@ import React from 'react';
 
 import {makeStyles} from "@material-ui/core/styles";
 
-const WorkspaceItem = ({title,imgSrc}) => {
+const WorkspaceItem = ({title,imgSrc,onClick}) => {
     const classes = useStyles();
 
     return (
-        <div className={classes.container}>
+        <div className={classes.container} onClick={onClick}>
                 <img src={imgSrc} alt="icon" className={classes.img}/>
+                <p style={{color:'#fff'}}>{title}</p>
         </div>
     );
 };

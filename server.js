@@ -18,6 +18,8 @@ console.log('serv');
 io.on('connection', socket => {
    let nsList = namespaces.map(ns => {
       return {
+         id:ns.id,
+         title:ns.nsTitle,
          img: ns.img,
          endpoint: ns.endpoint
       };

@@ -5,10 +5,12 @@ import rootSaga from './rootSaga';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import authReducer from '../auth/authReducer';
 import namespacesReducer from '../namespaces/namespacesReducer';
+import roomsReducer from "../rooms/roomsReducer";
 
 const reducers = combineReducers({
    auth: authReducer,
-   namespace: namespacesReducer
+   namespace: namespacesReducer,
+   room:roomsReducer
 });
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
